@@ -55,12 +55,12 @@ class Admin_model extends CI_Model {
   }
 
   public function insertObat(){
-    $kode = $this->input->post('kode_obat');
-    $nama = $this->input->post('nama');
-    $bentuk = $this->input->post('bentuk');
-    $harga  = $this->input->post('harga');
-    $konsum = $this->input->post('konsumen');
-    $manfaat= $this->input->post('manfaat');
+    $kode = $this->put('kode_obat');
+    $nama =$this->put('nama');
+    $bentuk = $this->put('bentuk');
+    $harga  = $this->put('harga');
+    $konsum = $this->put('konsumen');
+    $manfaat= $this->put('manfaat');
 
     $q = "INSERT INTO obat VALUES
           ('$kode', '$nama', '$bentuk', '$konsum', '$manfaat', '$harga')";

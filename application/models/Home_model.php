@@ -19,12 +19,12 @@ class Home_model extends CI_Model {
 
   public function checkKodeByKode($kode){
     $query = "SELECT * FROM pemesanan WHERE kode_pesan = '". $kode ."'";
-    return $this->db->query($query);
+    return $this->db->query($query)->num_rows();
   }
 
   public function checkKode($kode, $id){
     $query = "SELECT * FROM pemesanan WHERE kode_pesan = '". $kode ."' AND id_pemesan = '". $id ."'";
-    return $this->db->query($query);
+    return $this->db->query($query)->num_rows();
   }
 
   public function updateStatusPemesanan($kode){
